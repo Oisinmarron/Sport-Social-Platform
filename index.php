@@ -44,6 +44,45 @@
             #signup{
                 margin-left: 10px;
             }
+
+
+
+            #content{
+                padding-top: 62px;
+                background-color: #EBEDEF;
+            }
+
+            #leftContainer{
+                height: 1000px;
+                border-right: 1px solid #A6ACAF;
+                padding: 30px 0 0 30px;
+            }
+
+            #leftContainer button{
+                border: none;
+                font-size: 18px;
+            }
+
+            #leftContainer i{
+                float:left;
+                border: 2px solid #181818;
+                border-radius:3px;
+                padding:4px;
+                margin-right: 20px;
+            }
+
+            .userOptions{
+                padding-bottom: 30px;
+            }
+
+
+            #rightContainer{
+                height: 1000px;
+            }
+
+            .sportList{
+                padding: 20px 0 0 60px;
+            }
             
         </style>
 
@@ -52,7 +91,7 @@
 
 	<body>
 
-        <nav class="navbar navbar-custom navbar-expand-lg  navbar-dark py-1">
+        <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-dark py-1">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">App Name/Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,11 +100,11 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Newsfeed</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Discover</a>
+                            <a class="nav-link" href="#">Messages</a>
                         </li>
 
                         <li class="nav-item">
@@ -75,9 +114,9 @@
 
                     <div class="input-group rounded" id="searchBar">
                         <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                          <i class="fas fa-search"></i>
-                        </span>
+                        <button type="submit" class="input-group-text border-0" id="search-addon">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
 
                     <form method="post" class="d-flex" id="signInButtons">
@@ -90,27 +129,90 @@
                 </div>
             </div>
         </nav>
+
+
+
+        <div class="container-fluid" id="content">
+
+            <div class="row">
+
+                <div class="col-sm-3" id="leftContainer">
+
+                    <div class="userOptions">
+                        <button type="submit" name="user"><i class="fas fa-user"></i>User's Profile</button>
+                    </div>
+
+                    <div class="userOptions">
+                        <button type="submit"><i class="fas fa-user"></i>Friends</button>
+                    </div>
+
+                    <div class="userOptions">
+                        <button type="submit"><i class="fas fa-user"></i>Discover</button>
+                    </div>
+
+                    <div class="userOptions">
+                        <button type="submit"><i class="fas fa-user"></i>Popular</button>
+                    </div>
+
+                    <div class="userOptions">
+                        <button type="submit"><i class="fas fa-user"></i>Saved</button>
+                    </div>
+
+                    <div class="userOptions">
+                        <button type="submit"><i class="fas fa-user"></i>Sport</button>
+                        
+                        <div class="form-check sportList">
+                            <input class="form-check-input" type="checkbox" id="checkbox1" value="option1" checked>
+                            <label class="form-check-label" for="checkbox1">Basketball</label>
+                        </div>
+                        
+                        <div class="form-check sportList">
+                            <input class="form-check-input" type="checkbox" id="checkbox2" value="option2" checked>
+                            <label class="form-check-label" for="checkbox2">Soccer</label>
+                        </div>
+
+                        <div class="form-check sportList">
+                            <input class="form-check-input" type="checkbox" id="checkbox3" value="option3" checked>
+                            <label class="form-check-label" for="checkbox3">Hurling</label>
+                        </div>
+
+                        <div class="form-check sportList">
+                            <input class="form-check-input" type="checkbox" id="checkbox4" value="option4" checked>
+                            <label class="form-check-label" for="checkbox4">Hockey</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-9" id="rightContainer">
+
+                    <div id="createPost">
+
+                    </div>
+
+                    
+                    <div id="firstPost">
+
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
         
         
         
         <script type="text/Javascript">
 
             /*
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <input type="image" src="http://example.com/path/to/image.png"/>
 
-                <input class="btn btn-outline-light" type="submit" name="login" value="Log In"/>
-                        <input class="btn btn-outline-light" id="signup" type="submit" name="signup" value="Sign Up"/>
-
-                <input type="hidden" name="signInButtons" value="1">
-    
-                <button class="btn btn-outline-light" type="button" name="login">Log In</button>
-                        <button class="btn btn-outline-light" id="signup" type="submit" name="signup">Sign Up</button>
             */
-
-            $theme-colors: (
-                "custom-color": #34495E;
-            );
             
 
         </script>
